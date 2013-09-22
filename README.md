@@ -1,14 +1,10 @@
 add1314
 =======
 
-Asignatura *ADD* del curso 201314.
+Repositorio para la asignatura *ADD* del curso 201314.
 
-Esto es una prueba de **Markdown**, para que
-veamos lo que se puede hacer.
+Los trabajos se entregarán a través de este repositorio.
 
- Una prueba de código.
- 
-Opciones:
-* una
-* dos
-* tre
+DIrectorios por cada unidad:
+* unit.1 (Acceso remoto)
+
