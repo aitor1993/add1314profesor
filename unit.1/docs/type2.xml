@@ -1,0 +1,197 @@
+<section xml:id="moodle">
+        <title>Plataforma virtual Moodle</title>
+
+        <section>
+                <title>Tutorial para crear la encuesta de satisfacción</title>
+                <section>
+                        <title>Localizar el fichero con las preguntas.</title>
+                        <para>El primer paso será localizar un fichero llamado <quote>modulo-encuesta-satisfaccion.xml</quote>
+                        o algo así. Debería estar en alguno de los cursos Moodle de documentación donde tenemos 
+                        acceso todos los profesores del centro. Si no lo encuentran... consultar a los coordinadores 
+                        del curso de documentación (Jose María Heras y Sergio Delgado).</para>
+                        <para>Si tienen curiosidad, el fichero 
+                        contiene una batería de preguntas en un formato 
+                        llamado XML con el siguiente aspecto:</para>
+                        <figure id="modulo-encuesta-satisfaccion.xml">
+                                <title>Contenido XML</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso01-contenido-xml.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Contenido XML</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>modulo-encuesta-satisfaccion.xml</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>               
+                </section>
+
+                <section>
+                        <title>Entrar el nuestro curso Moodle</title>
+                        <para>Sigamos con el ejemplo... iniciamos un navegador (Firefox, Chrome, IE, etc.). 
+                        Entramos en el moodle con nuestro usuario/clave. Vamos al curso donde queremos 
+                        poner nuestra encuesta (Lógicamente debemos ser profesores en dicho curso :-)). 
+                        Activamos modo de edición. Entonces nos aparece en la zona central del curso 
+                        unos desplegables. Desplegamos <quote>Agregar actividad</quote> y seleccionamos 
+                        <quote>Modulo de encuesta</quote></para>
+                        <figure id="paso2-modulo-encuesta">
+                                <title>Módulo de encuesta</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso02-modulo-encuesta.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Módulo de encuesta</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Modulo de encuesta</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                <para>Pasamos a otra fase. En estos momentos empiezo a echar de menos el backup...</para>
+
+                        <para>Rellenamos: Nombre -> Encuesta de satisfacción, Descripción -> 
+                        Encuesta de satisfacción. Los campos con etiqueta en color rojo son obligados
+                        de completar.</para>
+                </section>
+                <section>
+                        <title>Subir el fichero y cargar las preguntas</title>
+                        <para>Pulsamos en <quote>guardar cambios y mostrar</quote>. Se nos abre otra pantalla, y
+                        picamos en la pestaña plantilla y luego en <quote>Importar preguntas</quote></para>
+                        <para>Ir a Seleccione archivo</para>
+                        <figure id="paso03-subir-fichero-xml">
+                                <title>Subir fichero XML</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso03-subir-fichero-xml.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Subir fichero con las preguntas</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Subir fichero con las preguntas</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                        <para>Le damos a Subir un archivo -> Examinar -> <quote>elegimos el fichero XML</quote>
+                        -> Subir un archivo.</para>
+                        <figure id="paso04-escoger-archivo">
+                                <title>Escoger archivo</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso04-escoger-archivo.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Escoger el archivo subido</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Escoger el archivo subido</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                        
+                        <figure id="paso05-archivo-escogido">
+                                <title>Importar archivo</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso05-archivo-escogido.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Importar archivo</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Éste es el archivo escogido</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                        <para>Pulsamos en importar. Para verificar vamos a Editar preguntas y veremos algo como:</para>
+                        <figure id="paso06-editar-preguntas">
+                                <title>Editar preguntas</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso06-editar-preguntas.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Editar preguntas</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Editar preguntas</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                </section>
+        </section>
+
+        <section id="encuesta">
+                <title>Ejemplo preguntas de encuesta</title>
+                <screen>
+                <xi:include  xmlns:xi="http://www.w3.org/2001/XInclude" 
+                href="modulo-encuesta-satisfaccion.xml" parse="text" />
+                </screen>
+        </section>
+
+        <section>
+                <title>Crear grupos dentro de un curso Moodle</title>
+                <para>la creación de grupos dentro de un mismo curso Moodle sirve cuando nos interesa
+                separar a grupos de alumnos matriculados en la misma asignatur. Por ejemplo, si impartimos
+                la misma asignatura en varios grupos A y B, nos interesa mantener un único curso, pero
+                tener separados A y B, para que no se mezclen los datos de los grupos. Con los
+                grupos podremos analizar los datos separados o todos los grupos unidos.</para>
+                <section>
+                        <title>Procedimiento para crear grupos</title>
+                        <para>Entramos en nuestro curso -> Grupos (Menú izquierdo). Vamos a Crear-Grupo. 
+                        Ponemos el nombre -> Guardar cambios.</para>
+                        <figure id="paso01-crear-grupos">
+                                <title>Crear grupos</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso01-crear-grupos.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Crear grupos</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Crear grupos</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                        <para>Ahora vamos a poner personas dentro de cada grupo. Seleccionamos un grupo -> 
+                        Agregar usuarios al grupo. Seleccionamos las personas -> Añadir.  Y cuando terminemos
+                         vamos a Regresar-a-los-grupos.</para>
+                        <figure id="paso02-agregar-usuarios">
+                                <title>Agregar usuarios</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso02-agregar-usuarios.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Agregar usuarios</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Agregar usuarios</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                         <caution>
+                                 <para>Una misma persona puede estar en varios grupos al mismo tiempo.</para>
+                         </caution>
+                        <figure id="paso03-grupos-terminados">
+                                <title>Consultar los miembros del grupo</title>
+                                <mediaobject>
+                                <imageobject>
+                                        <imagedata fileref="paso03-grupos-terminados.png" format="PNG"/>
+                                </imageobject>
+                                <textobject>
+                                        <phrase>Grupos terminados</phrase>
+                                </textobject>
+                                <caption>
+                                        <para>Grupos terminados</para>
+                                </caption>
+                                </mediaobject>
+                        </figure>
+                </section>
+        </section>
+        
+</section>
