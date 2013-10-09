@@ -1,0 +1,93 @@
+<chapter>
+	<title>Prueba</title>
+	<para>Texto de prueba</para>
+	
+	<section>
+		<title>Ejemplos</title>
+		
+		<para>Ejemplo de viñetas:</para>
+		<itemizedlist>
+                <listitem>Esquema de particionado con indicación del uso recomendado a cada una.</listitem>
+                <listitem>Usuarios/claves predefinidos.</listitem>
+                <listitem>Instalación y configuración previa al comienzo del curso.</listitem>
+                <listitem>Scripts utilizados</listitem>
+        </itemizedlist>
+		
+		<para>Veamos un ejemplo de imagen</para>
+
+	<figure>
+		<title>Contenido XML</title>
+        <mediaobject>
+			<imageobject>
+				<imagedata fileref="../img/logo-opensuse.png" format="PNG"/>
+            </imageobject>
+            <textobject>
+				<phrase>logo opensuse</phrase>
+            </textobject>
+            <caption>
+				<para>logo opensuse</para>
+            </caption>
+        </mediaobject>
+     </figure> 
+
+	<para>Ejemplo para incluir un fichero de texto</para>
+	<screen>
+		<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+             href="README" parse="text" />
+    </screen>
+    
+	<para>Ejemplo de tabla</para>
+    
+                    <table frame='all'>
+                <title>Particiones aula108 HDD 250GB</title>
+                <tgroup cols='5' align='left' colsep='1' rowsep='1'>
+                        <colspec colname='c1' colwidth="1*"/>
+                        <colspec colname='c2' colwidth="1*"/>
+                        <colspec colname='c3' colwidth="1*"/>
+                        <colspec colname='c4' colwidth="1*"/>
+                        <colspec colname='c5' colwidth="1*"/>
+                <thead>
+                        <row>
+                                <entry>Nº</entry>
+                                <entry>Dispositivo</entry>
+                                <entry>Espacio</entry>
+                                <entry>Punto de montaje</entry>
+                                <entry>Descripción</entry>
+                        </row>
+                </thead>
+                <tbody>
+                        <row>
+                                <entry>1</entry>
+                                <entry>/dev/sda1</entry>
+                                <entry>2 GB</entry>
+                                <entry>-</entry>
+                                <entry>Memoria virtual de la máquina real.</entry>
+                        </row>
+                        <row>
+                                <entry>2</entry>
+                                <entry>/dev/sda2</entry>
+                                <entry>20 GB</entry>
+                                <entry>/</entry>
+                                <entry>Sistema operativo de la máquina real.</entry>
+                        </row>
+                        <row>
+                                <entry>3</entry>
+                                <entry>/dev/sda3</entry>
+                                <entry>106 GB</entry>
+                                <entry>/mnt/asir</entry>
+                                <entry>Datos del usuario ASIR (máquinas virtuales, etc).</entry>
+                        </row>
+                        <row>
+                                <entry>4</entry>
+                                <entry>/dev/sda4</entry>
+                                <entry>106 GB</entry>
+                                <entry>/mnt/daw</entry>
+                                <entry>Datos del usuario DAW (máquinas virtuales, etc).</entry>
+                        </row>
+                </tbody>
+                </tgroup>
+        </table>
+
+    </section>
+</chapter>
+	

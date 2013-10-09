@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.0" xml:lang="es">
+	
+<info>
+   <title>
+La Biblia de Informática
+   </title>
+   <author>
+		<personname>
+			<firstname>David</firstname>
+			<surname>Vargas Ruiz</surname>
+		</personname>
+   </author>
+   
+	<legalnotice>
+          <para>Este documento está construcción. Tiene fallos que se van mejorando,
+          y puede no estar actualizado. Si tienes alguna propuesta al respecto me
+          la puedes hacer llegar, y si quieres colaborar en su desarrollo, estás
+          invitado a participar.</para>
+    </legalnotice>
+	<pubdate><?dbtimestamp?></pubdate>
+</info>
+
+
+<xi:include href="files/activity1.xml" />
+
+</book>
+
