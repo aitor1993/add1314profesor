@@ -4,6 +4,7 @@ EXITCOMMAND='logout'
 TIMECOMMAND=`date +%H%M`
 
 puts "Ejecutando #{$0}..."
+puts `date`
 
 sTime=TIMECOMMAND
 puts "HoraMinuto=#{sTime}"

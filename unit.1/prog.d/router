@@ -1,0 +1,29 @@
+#!/usr/bin/ruby
+
+puts "Ejecutando #{$0}..."
+action=ARGV.first
+FILE='/proc/sys/net/ipv4/ip_forward'
+
+def show_help
+	puts "Modo de uso:"
+	puts "  on  , Activar enrutamiento"
+	puts "  off , Desactivar enrutamiento"
+end
+
+if action=='on' then
+	system('echo "1" > '+FILE)
+	puts "router state on"
+elsif action=='off' then
+	system('echo "0" > '+FILE)
+	puts "router state off"
+elsif action=='status' then
+	value=`cat #{FILE}`
+	status='?'
+	status='on' if value[0]=="1"
+	status='off' if value[0]=="0"
+	puts "router status = " + status
+else
+	show_help
+end	
+
+
