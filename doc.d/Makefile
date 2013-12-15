@@ -21,7 +21,6 @@ pdf: second
 	@echo "=== [INFO] Creating PDF output..."
 	xsltproc -o $(FOPFILE) $(FOXSL) $(XMLFILE)
 	fop -fo $(FOPFILE) -pdf $(PDFFILE)
-	make cleantmp
 
 second:
 	@echo "\n=== Creating $(XMLFILE) with all xml files"
