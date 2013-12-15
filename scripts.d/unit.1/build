@@ -1,0 +1,28 @@
+#!/usr/bin/ruby
+
+puts "Ejecutando #{$0}..."
+action=ARGV.first
+packages=[ 'tree', 'vim', 'geany' ]
+
+def show_help
+	puts "Modo de uso:"
+	puts "  in  , Instalar paquetes"
+	puts "  rm  , Desinstalar los paquetes"
+	puts "  list, Listado de paquetes"
+end
+
+if action=='in' then
+	puts "Instalando..."
+	system("apt-get update")
+	packages.each {|p| system("apt-get install -y "+p) }
+elsif action=='rm' then
+	puts "Desinstalando..."
+	packages.each {|p| system("apt-get remove -y "+p) }
+elsif action=='list' then
+	puts "Listado de paquetes:"
+	puts packages.sort
+else
+	show_help
+end	
+
+
